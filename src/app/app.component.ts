@@ -10,13 +10,13 @@ export class AppComponent {
   constructor(){
     // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyDewzP-CMmds3Bi1Bj4hJFN8iiihfb3yRg",
-    authDomain: "angular2-afbd7.firebaseapp.com",
-    databaseURL: "https://angular2-afbd7.firebaseio.com",
-    projectId: "angular2-afbd7",
-    storageBucket: "",
-    messagingSenderId: "552863710744",
-    appId: "1:552863710744:web:662621f56253ce7e"
+    apiKey: "AIzaSyDdgB8FLxv6Ni_sAxKvwGkbBKPKQXf-lFc",
+    authDomain: "angular2-8d809.firebaseapp.com",
+    databaseURL: "https://angular2-8d809.firebaseio.com/",
+    projectId: "angular2-8d809",
+    storageBucket: "angular2-8d809.appspot.com",
+    messagingSenderId: "807735918493",
+    appId: "1:807735918493:web:aa5636e92153e79b"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

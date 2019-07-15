@@ -19,16 +19,15 @@ errorMessage: string;
   ngOnInit() {
     this.initForm();
   }
-  initForm(){
-
+  initForm() {
     this.signupForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['',[Validators.required, Validators.pattern(/[0.9a-zA-Z]{6.}/)]]
+      password: ['', [Validators.required, Validators.pattern(/[0-9a-zA-Z]{6,}/)]]
     });
   }
 
   onSubmit(){
-    const email = this.signupForm.get('emai').value;
+    const email = this.signupForm.get('email').value;
     const password = this.signupForm.get('password').value;
 
     this.authService.createNewUser(email, password).then(

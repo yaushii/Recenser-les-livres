@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
 })
-export class BookListComponent implements OnInit {
+export class BookListComponent implements OnInit, OnDestroy{
 
   books: Book[];
   booksSubscription: Subscription;
@@ -27,15 +27,15 @@ export class BookListComponent implements OnInit {
     this.booksService.emitBooks();
   }
 
-  onBook(){
+  onNewBook(){
     this.router.navigate(['/books', 'new']);
   }
 
-  onDelete(book: Book){
+  onDeleteBook(book: Book){
     this.booksService.removeBook(book);
   }
 
-  inViewBook(id: number) {
+  onViewBook(id: number) {
     this.router.navigate(['/books', 'view',id]);
   }
 
